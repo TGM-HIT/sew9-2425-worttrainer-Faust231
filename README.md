@@ -1,4 +1,5 @@
-# Felix Aust
-# 16.10.2024
+# wordtrainer
+## author: Felix Aust
+## date: 16.10.2024
 
-Das ist ein Worttrainer.
+This is a wordtrainer
