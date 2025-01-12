@@ -1,4 +1,4 @@
-package src.Persistence;
+package src.Model;
 
 public class Statistic {
     private int total;

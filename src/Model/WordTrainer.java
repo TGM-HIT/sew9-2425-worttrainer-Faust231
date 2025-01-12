@@ -1,6 +1,7 @@
-package src.Persistence;
+package src.Model;
 
 import java.util.Random;
+import src.Persistence.*;
 
 public class WordTrainer {
     private Statistic stats;
@@ -11,6 +12,9 @@ public class WordTrainer {
         this.stats = stats;
         this.wordPairs = wordPairs;
         this.index = 0;
+    }
+
+    public WordTrainer(){
     }
 
     public void randomIndex() {
@@ -44,5 +48,20 @@ public class WordTrainer {
 
     public boolean saveData() {
         return Persistence.saveData(this);
+    }
+
+    public boolean loadData() throws Exception {
+        try{
+            WordTrainer temp = new WordTrainer();
+            temp = Persistence.loadData();
+            this.stats = temp.getStatistic();
+            this.index = temp.getIndex();
+            this.wordPairs = temp.getWordPairs();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }

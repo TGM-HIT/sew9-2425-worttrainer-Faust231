@@ -1,4 +1,7 @@
-package src.Persistence;
+package src.Model;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class WordPair {
     private String word;
@@ -27,8 +30,13 @@ public class WordPair {
 
     public boolean setUrl(String url) {
         if (url != null && !url.isEmpty()) {
-            this.url = url;
-            return true;
+            try {
+                new URL(url); // Validate URL format
+                this.url = url;
+                return true;
+            } catch (MalformedURLException e) {
+                System.err.println("Invalid URL: " + url);
+            }
         }
         return false;
     }
