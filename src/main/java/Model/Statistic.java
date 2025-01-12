@@ -1,4 +1,4 @@
-package src.Model;
+package main.java.Model;
 
 import java.io.Serializable;
 
@@ -58,7 +58,7 @@ public class Statistic implements Serializable {
     @Override
     public String toString(){
         if(correct+falseAnswers>0) {
-            return "Correct: " + correct + "\nFalse: " + falseAnswers + "\nPercentage: " + correct / (correct + falseAnswers + 0.0);
+            return "Correct: " + correct + "\nFalse: " + falseAnswers + "\nPercentage: " + correct / (correct + falseAnswers + 0.0)*100+"%";
         }
         return "Correct: " + correct + "\nFalse: " + falseAnswers;
 

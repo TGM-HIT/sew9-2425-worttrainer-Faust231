@@ -1,8 +1,8 @@
-package src.Model;
+package main.java.Model;
 
 import java.io.Serializable;
 import java.util.Random;
-import src.Persistence.*;
+import main.java.Persistence.Persistence;
 
 public class WordTrainer implements Serializable {
     private Statistic stats;

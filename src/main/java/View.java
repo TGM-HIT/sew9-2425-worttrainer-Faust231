@@ -1,6 +1,6 @@
-package src;
+package main.java;
 
-import src.Model.WordTrainer;
+import main.java.Model.WordTrainer;
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
@@ -28,21 +28,20 @@ public class View {
 
             boolean x = true;
             while (x) {
-                System.out.println(correctWord); // testing
+                //System.out.println(correctWord); // testing
                 String userAnswer = displayWordPair();
 
-                System.out.println(userAnswer); // testing
+                //System.out.println(userAnswer); // testing
                 if (userAnswer != null && !userAnswer.isEmpty()) {
                     if (userAnswer.equalsIgnoreCase(correctWord)) {
                         wt.getStatistic().incrementCorrect();
-                        JOptionPane.showMessageDialog(null, "Correct!");
+                        //JOptionPane.showMessageDialog(null, "Correct!");
                         lastGuess = true;
                         x = false;
                     } else {
                         wt.getStatistic().incrementFalse();
                         lastGuess = false;
-                        JOptionPane.showMessageDialog(null, "Incorrect! Please try again");
-
+                        //JOptionPane.showMessageDialog(null, "Incorrect! Please try again");
                     }
                 } else {
                     int option = JOptionPane.showConfirmDialog(null, "Do you want to exit?", "Exit Confirmation", JOptionPane.OK_CANCEL_OPTION);

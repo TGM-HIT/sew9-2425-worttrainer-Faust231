@@ -1,4 +1,4 @@
-package src.Model;
+package main.java.Model;
 
 import java.io.Serializable;
 import java.net.MalformedURLException;

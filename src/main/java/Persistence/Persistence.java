@@ -1,7 +1,7 @@
-package src.Persistence;
+package main.java.Persistence;
 
 import java.io.*;
-import src.Model.*;
+import main.java.Model.*;
 
 public class Persistence {
 

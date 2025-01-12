@@ -1,9 +1,9 @@
-package src;
 
+
+import main.java.Persistence.Persistence;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-import src.Model.*;
-import src.Persistence.*;
+import main.java.Model.*;
 
 import java.io.File;
 
