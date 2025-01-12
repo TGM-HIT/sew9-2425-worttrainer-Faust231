@@ -1,6 +1,8 @@
 package src.Model;
 
-public class Statistic {
+import java.io.Serializable;
+
+public class Statistic implements Serializable {
     private int total;
     private int correct;
     private int falseAnswers;
