@@ -13,8 +13,14 @@ public class Statistic implements Serializable {
         this.falseAnswers = falseAnswers;
     }
 
+    public Statistic(){
+        this.total = 0;
+        this.correct = 0;
+        this.falseAnswers = 0;
+    }
+
     public int getTotal() {
-        return total;
+        return correct+falseAnswers;
     }
 
     public int getCorrect() {
@@ -39,5 +45,22 @@ public class Statistic implements Serializable {
             return true;
         }
         return false;
+    }
+
+    public void incrementCorrect(){
+        this.correct++;
+    }
+
+    public void incrementFalse(){
+        this.falseAnswers++;
+    }
+
+    @Override
+    public String toString(){
+        if(correct+falseAnswers>0) {
+            return "Correct: " + correct + "\nFalse: " + falseAnswers + "\nPercentage: " + correct / (correct + falseAnswers + 0.0);
+        }
+        return "Correct: " + correct + "\nFalse: " + falseAnswers;
+
     }
 }

@@ -32,7 +32,7 @@ public class WordPair implements Serializable {
     public boolean setUrl(String url) {
         if (url != null && !url.isEmpty()) {
             try {
-                new URL(url); // Validate URL format
+                new URL(url);
                 this.url = url;
                 return true;
             } catch (MalformedURLException e) {
