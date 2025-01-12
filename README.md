@@ -2,7 +2,7 @@
 ## author: Felix Aust
 ## date: 16.10.2024
 
-This is a wordtrainer.
+This is a wordtrainer. You are now able to study! Start it using gradle with either ./gradlew run for MacOS or gradlew run for Windows.
 
 ## Model
 The model consists of a Statistics class, that is responsible for saving the correct and wrong guesses, 
@@ -11,3 +11,6 @@ The wordtrainer has an array of wordpairs and is able to be saved using the pers
 
 ## Persistence
 Using ObjectStreams the object (wordtrainer) gets saved and read to and from a .ser file. 
+
+## UI
+The UI is implemented using JOptionPane. 
