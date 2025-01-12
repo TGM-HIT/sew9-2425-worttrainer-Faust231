@@ -18,16 +18,6 @@ test {
     useJUnitPlatform()
 }
 application {
-    mainClass = 'src/View.java'
+    mainClass = 'src/main/java/View.java'
 }
-java {
-    sourceCompatibility = JavaVersion.VERSION_20
-    targetCompatibility = JavaVersion.VERSION_20
-    sourceSets {
-        main {
-            java {
-                srcDirs = ['src']
-            }
-        }
-    }
-}
+

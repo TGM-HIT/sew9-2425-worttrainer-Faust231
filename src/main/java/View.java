@@ -85,7 +85,8 @@ public class View {
                     resizedImageIcon, // Image
                     lastGuessMessage,
                     "Your Answer (leave empty to exit):", // Label for input
-                    answerField // Input field for the user to type their answer
+                    answerField, // Input field for the user to type their answer
+                    wt.getStatistic().toString()
             };
 
             // Display the dialog with the image and input field
