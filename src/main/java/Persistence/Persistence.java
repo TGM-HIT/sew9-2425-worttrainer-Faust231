@@ -30,7 +30,7 @@ public class Persistence {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("wordTrainerData.ser"))) {
             return (WordTrainer) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return null;
         }
     }
