@@ -1,9 +1,10 @@
 package src.Model;
 
+import java.io.Serializable;
 import java.util.Random;
 import src.Persistence.*;
 
-public class WordTrainer {
+public class WordTrainer implements Serializable {
     private Statistic stats;
     private int index;
     private WordPair[] wordPairs;
@@ -60,7 +61,7 @@ public class WordTrainer {
         }
         catch (Exception e){
             e.printStackTrace();
-            return false;
+            throw new Exception("Wordtrainer can not be loaded");
         }
         return true;
     }
